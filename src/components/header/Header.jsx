@@ -1,14 +1,8 @@
-// function Header() {
-//     return (
-//         <header>
-//             Moja pierwsza aplikacja
-//         </header>
-//     )
-// }
+import "./header.css";
 
 const Header = () => {
     return (
-        <header>
+        <header className="headerContainer">
             Moja pierwsza aplikacja
         </header>
     )
