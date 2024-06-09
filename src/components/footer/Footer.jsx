@@ -1,8 +1,10 @@
+import "./footer.css";
+
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footerContainer">
             Wszystkie prawa zastrzezone 2024.
-            <div>
+            <div className="footerAuthor">
                 Autor: SDA
             </div>
         </footer>

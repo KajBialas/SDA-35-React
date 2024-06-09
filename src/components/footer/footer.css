@@ -1,0 +1,11 @@
+.footerContainer {
+    background-color:  gray;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.footerAuthor {
+    font-size: 10px;
+}
