@@ -9,5 +9,12 @@ export const TEXTS = {
     footer: {
       copyrightInfo: 'Wszystkie prawa zastrzezone 2024.',
       authorInfo: 'Autor: SDA'
+    },
+    counter: {
+      button: {
+        incrementText: 'ZWIĘKSZ WARTOŚĆ',
+        decrementText: 'ZMNIEJSZA WARTOŚĆ',
+        resetText: 'RESET'
+      }
     }
   };
