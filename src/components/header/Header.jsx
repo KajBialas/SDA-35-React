@@ -1,8 +1,8 @@
-import "./header.css";
+import styles from './header.module.css';
 
 const Header = () => {
     return (
-        <header className="headerContainer">
+        <header className={styles.headerContainer}>
             Moja pierwsza aplikacja
         </header>
     )

@@ -17,5 +17,5 @@ function App() {
 export default App
 
 
-// Zadanie 5
-// Dodaj style dla komponentów Header, TextSection oraz Footer
+// Zadanie 6
+// Wykorzystaj css modules dla wszystkich komponentow
