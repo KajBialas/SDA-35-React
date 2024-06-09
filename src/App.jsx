@@ -16,6 +16,3 @@ function App() {
 
 export default App
 
-
-// Zadanie 6
-// Wykorzystaj css modules dla wszystkich komponentow

@@ -1,10 +1,10 @@
-import "./footer.css";
+import styles from "./footer.module.css";
 
 const Footer = () => {
     return (
-        <footer className="footerContainer">
+        <footer className={styles.footerContainer}>
             Wszystkie prawa zastrzezone 2024.
-            <div className="footerAuthor">
+            <div className={styles.footerAuthor}>
                 Autor: SDA
             </div>
         </footer>
