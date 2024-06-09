@@ -1,11 +1,11 @@
 import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer className={styles.footerContainer}>
-            Wszystkie prawa zastrzezone 2024.
+            { props.copyrightInfo }
             <div className={styles.footerAuthor}>
-                Autor: SDA
+                { props.authorInfo }
             </div>
         </footer>
     )

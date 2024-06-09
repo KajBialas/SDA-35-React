@@ -1,9 +1,9 @@
 import styles from './header.module.css';
 
-const Header = () => {
+const Header = ({title}) => {
     return (
         <header className={styles.headerContainer}>
-            Moja pierwsza aplikacja
+            {title}
         </header>
     )
 }
