@@ -44,6 +44,14 @@ const Form = () => {
         setUsers(newUsers);
     }
 
+    // const handleEditUser = (email, name, surname, adress) => {
+    //     setUsers(users.map(user => 
+    //         user.email === email 
+    //             ? { ...user, name, surName: surname, adress }
+    //             : user
+    //     ));
+    // }
+
     return (
         <div>
             <form onSubmit={handleSubmit}>

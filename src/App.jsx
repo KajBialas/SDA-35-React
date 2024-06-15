@@ -1,9 +1,9 @@
 import Header from './components/header/Header';
-import Counter from './components/counter/Counter';
-import TextSection from './components/textSection/TextSection';
-import Form from './components/form/Form';
 import Footer from './components/footer/Footer';
+import Home from './pages/home/Home';
+import Contact from './pages/contact/Contact';
 import { TEXTS } from './utils/translations';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -12,10 +12,14 @@ function App() {
   return (
     <>
       <Header title={TEXTS.header.title} />
-      <TextSection content={TEXTS.textSection.content1} />
-      <TextSection content={TEXTS.textSection.content2} />
-      <Counter />
-      <Form />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+
       <Footer 
         copyrightInfo={TEXTS.footer.copyrightInfo}
         authorInfo={TEXTS.footer.authorInfo}
@@ -25,3 +29,8 @@ function App() {
 }
 
 export default App
+
+
+// Zadanie 4
+// Dodaj routing w aplikacji
+// Utworz przełączanie między stronami: Home, About, Offer oraz Contact - /, /about, /offer, /contact
