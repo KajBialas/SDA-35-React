@@ -1,4 +1,4 @@
-const UsersList = ({ users }) => {
+const UsersList = ({ users, handleDeleteUser }) => {
     const renderUsers = () => users.map(user =>(
         <li key={user.email}>
             <p>
@@ -10,6 +10,7 @@ const UsersList = ({ users }) => {
             <p>
                 Email: {user.email}
             </p>
+            <button onClick={() => handleDeleteUser(user.email)}>Usuń</button>
         </li>
     ));
 
@@ -24,3 +25,11 @@ const UsersList = ({ users }) => {
 }
 
 export default UsersList;
+
+// Zadanie 3
+// Utwórz mozliwość edycji uzytkownika
+// - stworzyc nowy formularz
+// - moze on się wyswietlac caly czas (kilka formularzy)
+
+// Zadanie 3 - dodatkowe
+// Formularz edycji powinien uruchamiac się po kliknięciu przycisku Edytuj

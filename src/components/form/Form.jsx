@@ -26,6 +26,14 @@ const Form = () => {
         setInputAdress('');
     }
 
+    const handleDeleteUser = (email) => {
+        setUsers(users.filter(user => user.email !== email))
+    }
+
+    const handleEditUser = (email, name, surname, adress) => {
+        // modyfikacja stanu
+    }
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -68,7 +76,7 @@ const Form = () => {
                 
                 <button type="submit">Wyślij</button>
             </form>
-            <UsersList users={users} />
+            <UsersList users={users} handleDeleteUser={handleDeleteUser} />
         </div>
         
     )
