@@ -31,7 +31,17 @@ const Form = () => {
     }
 
     const handleEditUser = (email, name, surname, adress) => {
-        // modyfikacja stanu
+        const newUsers = [...users];
+
+        newUsers.forEach(user => {
+            if (user.email === email) {
+                user.name = name;
+                user.surName = surname;
+                user.adress = adress;
+            }
+        });
+
+        setUsers(newUsers);
     }
 
     return (
@@ -76,7 +86,11 @@ const Form = () => {
                 
                 <button type="submit">Wyślij</button>
             </form>
-            <UsersList users={users} handleDeleteUser={handleDeleteUser} />
+            <UsersList 
+                users={users} 
+                handleDeleteUser={handleDeleteUser} 
+                handleEditUser={handleEditUser} 
+            />
         </div>
         
     )

@@ -1,17 +1,16 @@
-const UsersList = ({ users, handleDeleteUser }) => {
+import UsersListElement from "./UsersListElement";
+
+const UsersList = ({ users, handleDeleteUser, handleEditUser }) => {
     const renderUsers = () => users.map(user =>(
-        <li key={user.email}>
-            <p>
-                Imię i nazwisko: {user.name} { user.surName}
-            </p>
-            <p>
-                Adres: {user.adress}
-            </p>
-            <p>
-                Email: {user.email}
-            </p>
-            <button onClick={() => handleDeleteUser(user.email)}>Usuń</button>
-        </li>
+        <UsersListElement 
+            key={user.email}
+            name={user.name} 
+            surName={user.surName} 
+            adress={user.adress} 
+            email={user.email} 
+            handleDeleteUser={handleDeleteUser}
+            handleEditUser={handleEditUser}
+        />
     ));
 
     return (
