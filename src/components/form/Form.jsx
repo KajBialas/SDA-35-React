@@ -81,12 +81,7 @@ const Form = () => {
 export default Form;
 
 
-// Zadanie 1:
-// - utwórz formularz zawięrajacy: imie, nazwisko, adres, email
-// - po wysłaniu dane powinny zalogować się w konsoli przegladarki
-// - po wysłaniu formularz powinien zawierać puste dane
-
-
-// Zadanie 1 dodatkowe:
-// - wyświetl dane z formularze w przegladarce
-// - po ponownym wyslaniu formularza, poprzednie dane tez powinny byc widoczne
+// Zadanie 2
+// Zainstaluj React Developer Tools w przeglądarce
+// Wyswietl wszystkie dane uzytkownikow dodawanych przez formularz
+// Wykorzystaj reuzywalne komponenty dla calego formularza: Button oraz Utworzyć komponent UserList
