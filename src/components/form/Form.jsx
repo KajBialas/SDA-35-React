@@ -1,4 +1,5 @@
 import { useState } from "react";
+import UsersList from "../usersList/UsersList";
 
 const Form = () => {
     const [ inputName, setInputName ] = useState('');
@@ -67,12 +68,7 @@ const Form = () => {
                 
                 <button type="submit">Wyślij</button>
             </form>
-            <div>
-                <h1>
-                    Uzytkownicy:
-                </h1>
-                { users.map(element => <div>{element.name}</div>)}
-            </div>
+            <UsersList users={users} />
         </div>
         
     )
@@ -80,8 +76,3 @@ const Form = () => {
 
 export default Form;
 
-
-// Zadanie 2
-// Zainstaluj React Developer Tools w przeglądarce
-// Wyswietl wszystkie dane uzytkownikow dodawanych przez formularz
-// Wykorzystaj reuzywalne komponenty dla calego formularza: Button oraz Utworzyć komponent UserList
