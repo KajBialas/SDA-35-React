@@ -2,8 +2,10 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
+import Offer from './pages/offer/Offer';
+import About from './pages/about/About';
 import { TEXTS } from './utils/translations';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -11,12 +13,13 @@ function App() {
 
   return (
     <>
-      <Header title={TEXTS.header.title} />
-
       <Router>
+        <Header title={TEXTS.header.title} />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/offer" element={<Offer />} />
         </Routes>
       </Router>
 
