@@ -3,26 +3,27 @@ import { useState, useEffect } from 'react';
 const Blog = () => {
     const [ blogData, setBlogData] = useState([]);
     const [ isLoading, setIsLoading] = useState(false);
-    const [ isError, setIsError] = useState(false);
+    const [ error, setError] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('https://jsonplaceholder.typicode.com/posts22')
+        fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Wrong status');
+                    throw new Error('Błąd pobierania danych');
                 }
                 return response.json()
             })
             .then(data => {
                 setTimeout(() => {
                     setBlogData(data);
+                    setError(false);
                     setIsLoading(false);
                 }, 3000);
                 
             })
             .catch( error => {
-                setIsError(true);
+                setError(error);
                 setIsLoading(false);
 
             });
@@ -39,7 +40,7 @@ const Blog = () => {
         <>
             <h1>Blog</h1>
             {isLoading && <div>Ładowanie...</div>}
-            {isError && <div>Błąd ładowania danych</div>}
+            {error && <div>Błąd: {error.message}</div>}
             {renderBlogPosts()}
         </>
     )
