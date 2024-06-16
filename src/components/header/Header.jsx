@@ -18,6 +18,12 @@ const Header = ({title}) => {
                 <Link to="/contact" className={styles.headerLink}>
                     Contact
                 </Link>
+                <Link to="/counter" className={styles.headerLink}>
+                    Counter
+                </Link>
+                <Link to="/users" className={styles.headerLink}>
+                    Users
+                </Link>
             </nav>
         </header>
     )

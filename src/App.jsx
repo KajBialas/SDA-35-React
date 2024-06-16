@@ -4,8 +4,10 @@ import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
 import Offer from './pages/offer/Offer';
 import About from './pages/about/About';
+import Users from './pages/users/Users';
+import Counter from './pages/counter/Counter';
 import { TEXTS } from './utils/translations';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/counter" element={<Counter />} />
         </Routes>
       </Router>
 
@@ -34,6 +38,8 @@ function App() {
 export default App
 
 
-// Zadanie 4
-// Dodaj routing w aplikacji
-// Utworz przełączanie między stronami: Home, About, Offer oraz Contact - /, /about, /offer, /contact
+// Zadanie 0
+// 1. Utwórz podstrone Counter, oraz przenieś tam komponent licznika
+// 2. Utwórz podstrone Uzytkownicy oraz przenies tam komponet formularza
+// 3. Utwórz w menu linki do wszystkich podstron
+
