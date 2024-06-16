@@ -7,6 +7,7 @@ import About from './pages/about/About';
 import Users from './pages/users/Users';
 import Counter from './pages/counter/Counter';
 import Blog from './pages/blog/Blog';
+import BlogPostDetails from './pages/blogPostDetails/BlogPostDetails';
 import { TEXTS } from './utils/translations';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:postId" element={<BlogPostDetails />} />
         </Routes>
       </Router>
 

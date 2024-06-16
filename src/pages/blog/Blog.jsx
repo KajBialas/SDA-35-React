@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     const [ blogData, setBlogData] = useState([]);
@@ -32,6 +33,7 @@ const Blog = () => {
     const renderBlogPosts = () => blogData.map(blogPost => (
         <div key={blogPost.id}>
             {blogPost.title}
+            <Link to={`/blog/${blogPost.id}`}>Czytaj więcej</Link>
         </div>
     ));
 
