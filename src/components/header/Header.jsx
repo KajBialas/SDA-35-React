@@ -24,6 +24,9 @@ const Header = ({title}) => {
                 <Link to="/users" className={styles.headerLink}>
                     Users
                 </Link>
+                <Link to="/blog" className={styles.headerLink}>
+                    Blog
+                </Link>
             </nav>
         </header>
     )
