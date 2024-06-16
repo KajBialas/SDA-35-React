@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../button/Button";
 import TextSection from "../textSection/TextSection";
 import { TEXTS } from "../../utils/translations";
@@ -20,6 +20,33 @@ const Counter = () => {
     setCounter(INITIAL_COUNTER_VALUE);
   }
 
+  // const timeout = setInterval(() => {
+  //   // setCounter(counter+1)
+  // }, 10000);
+
+  // clearInterval(timeout);
+
+
+  // montowanie komponentu
+  // odswiezanie komponentu
+  // odmontowywanie komponentu
+
+  useEffect(() => {
+    console.log('montowanie komponentu');
+
+    return () => {
+      console.log('odmontowywanie komponentu');
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log('odswiezenie przez counter')
+  }, [counter]);
+
+  useEffect(() => {
+    console.log('kazde odswiezenie komponentu');
+  });
+
   return (
     <>
         <TextSection content={counter} />
@@ -32,9 +59,3 @@ const Counter = () => {
 
 export default Counter;
 
-
-// Zadanie 0
-// Utwórz komponent button oraz przekaz mu wszystkie parametry niezbedne do obslugi stanu licznika
-
-// Zadamie 0 dodatkowe
-// Utwórz typy przycisku, tak zeby kazdy z rodzaju mial inny kolor
