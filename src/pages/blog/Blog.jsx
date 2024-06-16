@@ -1,36 +1,10 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useFetch } from '../../hooks/useFetch';
 
 const Blog = () => {
-    const [ blogData, setBlogData] = useState([]); // {title, body, id}
-    const [ isLoading, setIsLoading] = useState(false);
-    const [ error, setError] = useState(false);
+    const { data, isLoading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
 
-    useEffect(() => {
-        setIsLoading(true);
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Błąd pobierania danych');
-                }
-                return response.json()
-            })
-            .then(data => {
-                setTimeout(() => {
-                    setBlogData(data);
-                    setError(false);
-                    setIsLoading(false);
-                }, 3000);
-                
-            })
-            .catch( error => {
-                setError(error);
-                setIsLoading(false);
-
-            });
-    }, []);
-
-    const renderBlogPosts = () => blogData.map(blogPost => (
+    const renderBlogPosts = () => data.map(blogPost => (
         <div key={blogPost.id}>
             {blogPost.title}
             <Link to={`/blog/${blogPost.id}`}>Czytaj więcej</Link>
@@ -50,3 +24,7 @@ const Blog = () => {
 
 export default Blog;
 
+
+// Zadanie 5
+// Stwórz custom hook do pobierania danych
+// Zaimplemntuj uniwersalne rozwiązanie w zakładce Blog oraz BlogPostDetails

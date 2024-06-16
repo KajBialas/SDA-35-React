@@ -45,11 +45,3 @@ const BlogPostDetails = () => {
 
 export default BlogPostDetails;
 
-
-// Zadanie 4
-// 1. Utwórz dynamiczny routing dla szczegółów postu
-// 2. Wykonaj zapytanie do API i pobierz szczegóły konkretnego postu
-// 3. Wyświetl szczegóły postu
-
-// Zadanie 4 dodatkowe
-// 1. Obsłuz obsluge ladowania i bledow
