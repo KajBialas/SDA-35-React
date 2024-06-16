@@ -42,8 +42,3 @@ function App() {
 export default App
 
 
-// Zadanie 0
-// 1. Utwórz podstrone Counter, oraz przenieś tam komponent licznika
-// 2. Utwórz podstrone Uzytkownicy oraz przenies tam komponet formularza
-// 3. Utwórz w menu linki do wszystkich podstron
-

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
-    const [ blogData, setBlogData] = useState([]);
+    const [ blogData, setBlogData] = useState([]); // {title, body, id}
     const [ isLoading, setIsLoading] = useState(false);
     const [ error, setError] = useState(false);
 
@@ -50,9 +50,3 @@ const Blog = () => {
 
 export default Blog;
 
-// Zadanie 3
-// Zaimplementuj obsluge błędów oraz statusu ładowania
-
-// Zadanie 3 dodatkowe
-// Zaimplementuj graficzną wersję loadera
-// Wyświetl informacje o błędzie, zwróconą z kodu
