@@ -17,7 +17,7 @@ const Blog = () => {
             <h1>Blog</h1>
             {isLoading && <div>Ładowanie...</div>}
             {error && <div>Błąd: {error.message}</div>}
-            {renderBlogPosts()}
+            {data && renderBlogPosts()}
         </>
     )
 }

@@ -17,7 +17,7 @@ export const useFetch = (url) => {
                 return response.json()
             })
             .then(data => {
-                 setData(data);
+                setData(data);
                 setIsLoading(false);                
             })
             .catch( error => {
